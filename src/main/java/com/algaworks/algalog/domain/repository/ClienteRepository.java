@@ -11,5 +11,5 @@ import com.algaworks.algalog.domain.model.Cliente;
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
 		List<Cliente> findByNome(String nome);
-		
+		List<Cliente> findByEmail(String email);
 }
