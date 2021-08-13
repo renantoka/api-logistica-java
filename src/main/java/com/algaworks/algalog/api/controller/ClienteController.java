@@ -1,7 +1,8 @@
 package com.algaworks.algalog.api.controller;
 
 import java.util.List;
-import java.util.Optional;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -52,7 +53,7 @@ public class ClienteController {
 		
 		@PostMapping
 		@ResponseStatus(HttpStatus.CREATED)
-		public Cliente cadastrarCliente(@RequestBody Cliente cliente) {
+		public Cliente cadastrarCliente(@Valid @RequestBody Cliente cliente) {
 			return clienteRepository.save(cliente);
 		}
 		
