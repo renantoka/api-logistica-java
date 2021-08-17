@@ -21,7 +21,7 @@ public class SolicitacaoEntregaService {
 	private CatalogoClienteService catalogoClienteService;
 	private EntregaRepository entregaRepository;
 	
-	public Entrega buscarEntregaPorId(Long entregaId) {
+	public Entrega buscar(Long entregaId) {
 		return entregaRepository.findById(entregaId)
 				.orElseThrow(() -> new DomainException("Entrega não encontrada"));
 	}
