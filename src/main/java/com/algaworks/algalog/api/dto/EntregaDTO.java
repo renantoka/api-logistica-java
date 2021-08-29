@@ -11,7 +11,7 @@ import lombok.Data;
 public class EntregaDTO {
 
 	private Long id;
-	private ClienteResumoModel cliente;
+	private ClienteResumoDTO cliente;
 	private DestinatarioDTO destinatario;
 	private BigDecimal taxa;
 	private StatusEntrega status;
